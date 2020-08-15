@@ -15,10 +15,7 @@
 			}
 
 			body {
-				min-height: 100vh;
-				transition: all 1s ease-in-out;
-
-				background-size: cover;
+				height: 100vh;
 			}
 
 			#main {
@@ -33,7 +30,7 @@
 			.main_flag {
 				height: 300px;
 				position: relative;
-				top: -150px;
+				top: -80px;
 				width: 600px;
 			}
 
@@ -117,8 +114,6 @@
 			@media only screen and (max-width: 650px) {
 				.main_flag {
 					height: 300px;
-					top: -100px;
-					position: relative;
 					width: 90%;
 				}
 
@@ -194,10 +189,6 @@
 								document.querySelector('.middle_symbol').style.opacity = '1';
 								setTimeout(() => {
 									document.querySelector('.day_text').style.opacity = '1';
-									setTimeout(() => {
-										document.getElementById('main').style.cssText =
-											'background: linear-gradient(to bottom, #ff9933, #fff, #138808) center no-repeat';
-									}, 1000);
 								}, 1000);
 							}, 1000);
 						}, 1000);
