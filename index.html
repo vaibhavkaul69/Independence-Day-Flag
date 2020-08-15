@@ -1,0 +1,209 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Happy Independence Day</title>
+		<link rel="icon" href="Ashoka_Chakra.svg" />
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+
+			body {
+				min-height: 100vh;
+				transition: all 1s ease-in-out;
+
+				background-size: cover;
+			}
+
+			#main {
+				width: 100%;
+				min-height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: all 1s ease-in-out;
+			}
+
+			.main_flag {
+				height: 300px;
+				position: relative;
+				top: -150px;
+				width: 600px;
+			}
+
+			.flag_body {
+				height: 100%;
+				transform: scale(0);
+				z-index: 9;
+				box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+				position: relative;
+				transition: all 1s ease-in-out;
+				width: 100%;
+			}
+
+			.safron_strip {
+				width: 0%;
+				transition: all 1s ease-in-out;
+				background: #ff9933;
+				height: calc(100% / 3);
+			}
+
+			.white_strip {
+				width: 0%;
+				transition: all 1s ease-in-out;
+				position: relative;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: calc(100% / 3);
+			}
+
+			.green_strip {
+				width: 0%;
+				transition: all 1s ease-in-out;
+				background: #138808;
+				height: calc(100% / 3);
+			}
+
+			.middle_symbol {
+				height: 80px;
+				width: 80px;
+				opacity: 0;
+				transition: all 1s ease-in-out;
+				position: absolute;
+			}
+
+			.flag_stand {
+				width: 5px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: 999;
+				height: 600px;
+				transform: translateY(2000px);
+				transition: all 1s ease-in-out;
+				background-color: #000;
+			}
+
+			.day_text {
+				position: absolute;
+				right: 20px;
+				opacity: 0;
+				transition: all 1s ease-in-out;
+				margin: 20px auto;
+				font-size: 5rem;
+				font-weight: 900;
+			}
+
+			.day_text > span:nth-child(1) {
+				color: #ff9933;
+			}
+
+			.day_text > span:nth-child(2) {
+				color: #000080;
+			}
+
+			.day_text > span:nth-child(3) {
+				color: #138808;
+			}
+
+			@media only screen and (max-width: 650px) {
+				.main_flag {
+					height: 300px;
+					top: -100px;
+					position: relative;
+					width: 90%;
+				}
+
+				.day_text {
+					right: 10px;
+					font-size: 4rem;
+				}
+				.flag_stand {
+					height: 500px;
+				}
+			}
+
+			@media only screen and (max-width: 500px) {
+				.main_flag {
+					height: 300px;
+					position: relative;
+					width: 90%;
+				}
+
+				.day_text {
+					right: 10px;
+					font-size: 3rem;
+				}
+			}
+
+			@media only screen and (max-width: 400px) {
+				.main_flag {
+					height: 300px;
+					position: relative;
+					width: 95%;
+				}
+
+				.day_text {
+					right: 10px;
+					font-size: 2.8rem;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="main_flag">
+				<div class="flag_body">
+					<div class="safron_strip"></div>
+					<div class="white_strip">
+						<img class="middle_symbol" src="Ashoka_Chakra.svg" />
+					</div>
+					<div class="green_strip"></div>
+				</div>
+				<div class="day_text">
+					<span>Happy<br /></span>
+					<span>Independence<br /></span>
+					<span> Day<br /></span>
+				</div>
+				<div class="flag_stand"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		setTimeout(() => {
+			document.querySelector('.flag_body').style.cssText = 'transform:scale(1)';
+			setTimeout(() => {
+				document.querySelector('.flag_stand').style.cssText =
+					'transform:translateY(0px)';
+				setTimeout(() => {
+					document.querySelector('.safron_strip').style.width = '100%';
+					setTimeout(() => {
+						document.querySelector('.white_strip').style.width = '100%';
+						setTimeout(() => {
+							document.querySelector('.green_strip').style.width = '100%';
+							setTimeout(() => {
+								document.querySelector('.middle_symbol').style.opacity = '1';
+								setTimeout(() => {
+									document.querySelector('.day_text').style.opacity = '1';
+									setTimeout(() => {
+										document.getElementById('main').style.cssText =
+											'background: linear-gradient(to bottom, #ff9933, #fff, #138808) center no-repeat';
+									}, 1000);
+								}, 1000);
+							}, 1000);
+						}, 1000);
+					}, 1000);
+				}, 1000);
+			}, 1000);
+		}, 1000);
+	</script>
+</html>
